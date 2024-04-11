@@ -1,4 +1,4 @@
-import decorateRange from './components/range/range.js';
+
 
 /**
  * returns a decorator to decorate the field definition
@@ -14,9 +14,5 @@ export default async function componentDecorator(fd) {
     const module = await import('./components/wizard.js');
     return module.default;
   }
-  if (fieldType === 'range'){
-    fieldDiv.classList.add('range-widget-wrapper');
-    return decorateRange;
-  };
-  return null;
+
 }
